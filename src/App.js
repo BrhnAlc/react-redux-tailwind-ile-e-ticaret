@@ -1,11 +1,16 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Detail from "./pages/Detail";
 
 function App() {
   return (
     <div className="App">
-      <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+      <BrowserRouter>
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/detail:id" element={<Detail/>} />
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }
