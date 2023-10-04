@@ -1,27 +1,29 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Detail from "./pages/Detail";
+import Detail from './pages/Detail';
+import PageContainer from "./containers/PageContainer";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import PageContainer from "./containers/PageContainer";
 
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
+      
       <PageContainer>
-      <BrowserRouter>
-      <Navbar/>
+       <BrowserRouter>
+       <Navbar/>
       <Routes>
-          <Route path="/"         element={<Home />} />
-          <Route path="/detail/:id"   element={<Detail/>} />
+          <Route path="/" element={<Home />} />
+          <Route path="detail/:id" element={<Detail/>} />
       </Routes>
-      <Footer/>
-    </BrowserRouter> 
+    <Footer/>
+    </BrowserRouter>
     </PageContainer>
+   
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

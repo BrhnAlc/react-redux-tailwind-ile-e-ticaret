@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+
 
 const PageContainer = ({children}) => {
   return (
-    <div className='w-3/4 m-auto bg-gray-100'>{children}</div>
+    <div className="w-3/4 mx-auto">{children}
+    
+   
+    </div>
   )
 }
 
-export default PageContainer
+export default PageContainer;
